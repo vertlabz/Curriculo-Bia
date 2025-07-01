@@ -10,55 +10,78 @@
       max-width: 850px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #f4f4f4;
-      color: #222;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
     }
     h1 {
       font-size: 24px;
       margin-bottom: 0;
-      color: #2c3e50;
+      color: #ffffff;
     }
     h2 {
       font-size: 18px;
       margin-top: 30px;
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid #555;
       padding-bottom: 5px;
-      color: #34495e;
+      color: #cccccc;
+    }
+    .info-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
     }
     .foto {
-      float: left;
       width: 120px;
       height: 160px;
-      margin-right: 20px;
-      
+      background-color: #333;
+      flex-shrink: 0;
     }
     .foto img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border: 1px solid #bbb;
+      border: 1px solid #666;
     }
     .info {
-      overflow: hidden;
+      flex: 1;
+      min-width: 200px;
     }
     ul {
       margin: 0 0 20px 20px;
     }
     p {
+      text-align: justify;
       margin: 5px 0;
+    }
+    a {
+      color: #7db9e8;
+    }
+    @media (max-width: 600px) {
+      .info-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .foto {
+        margin: 0 auto;
+      }
+      .info {
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="info">
+  <div class="info-container">
     <div class="foto">
       <img src="./bia.jpg" alt="Foto de Beatriz Klitzke Kepp">
     </div>
-    <div>
+    <div class="info">
       <h1>Beatriz Klitzke Kepp</h1>
       <p>Rua Carlos Lopes, 68, Centro – Conceição do Castelo/ES – CEP: 29370-000</p>
       <p>Telefone: (28) 99928-0143</p>
-      <p>Email: beatrizklitzke2@gmail.com</p>
+      <p>Email: <a href="mailto:beatrizklitzke2@gmail.com">beatrizklitzke2@gmail.com</a></p>
       <p>Data de nascimento: 26/08/2001</p>
       <p>Estado civil: Solteira</p>
     </div>
